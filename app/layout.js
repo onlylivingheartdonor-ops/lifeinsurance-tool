@@ -3,7 +3,7 @@ export const metadata = {
   description: "Free calculators for mortgage affordability, retirement savings, emergency funds, debt payoff, and more. Make smarter money decisions with tools that do the math for you.",
   
   alternates: {
-    canonical: "https:/https://www.lifeinsurancecoveragecalculator.com",           // ← MUST CHANGE
+    canonical: "https://www.lifeinsurancecoveragecalculator.com",           // ← MUST CHANGE
   },
 
   openGraph: {
@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "Moneywise Calculators",             // ← Change
     images: [
       {
-        url: "https://https://www.lifeinsurancecoveragecalculator.com/og-image.png", // ← MUST CHANGE
+        url: "https://www.lifeinsurancecoveragecalculator.com/og-image.png", // ← MUST CHANGE
         width: 1200,
         height: 630,
         alt: "Life Insurance Coverage Calculator",
