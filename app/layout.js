@@ -1,22 +1,22 @@
 export const metadata = {
-  title: "Life Insurance Coverage Calculator | Rest At Ease Knowing Your Loved Ones Are Protected",
-  description: "Free calculators for mortgage affordability, retirement savings, emergency funds, debt payoff, and more. Make smarter money decisions with tools that do the math for you.",
-  
+  title: "Life Insurance Coverage Calculator | How Much Life Insurance Do You Need?",
+  description: "Calculate how much life insurance coverage your family needs using the DIME method (Debt, Income, Mortgage, Education). Compare with 10× income and Human Life Value methods.",
+
   alternates: {
-    canonical: "https://www.lifeinsurancecoveragecalculator.com",           // ← MUST CHANGE
+    canonical: "https://www.lifeinsurancecoveragecalculator.com",
   },
 
   openGraph: {
-    title: "Life Insurance Coverage Calculator | Rest At Ease Knowing Your Loved Ones Are Protected",
-    description: "Free calculators for mortgage affordability, retirement savings, emergency funds, debt payoff, and more. Make smarter money decisions with tools that do the math for you.",
-    url: "https://www.lifeinsurancecoveragecalculator.com",                 // ← MUST CHANGE
-    siteName: "Moneywise Calculators",             // ← Change
+    title: "Life Insurance Coverage Calculator | How Much Life Insurance Do You Need?",
+    description: "Calculate how much life insurance coverage your family needs using the DIME method. Compare with 10× income and Human Life Value methods.",
+    url: "https://www.lifeinsurancecoveragecalculator.com",
+    siteName: "MoneyWise Calculators",
     images: [
       {
-        url: "https://www.lifeinsurancecoveragecalculator.com/og-image.png", // ← MUST CHANGE
+        url: "https://www.lifeinsurancecoveragecalculator.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Life Insurance Coverage Calculator",
+        alt: "Life Insurance Coverage Calculator — How much coverage do you need?",
       },
     ],
     locale: "en_US",
@@ -25,8 +25,8 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Life Insurance Coverage Calculator | Rest At Ease Knowing Your Loved Ones Are Protected",
-    description: "Free calculators for mortgage affordability, retirement savings, emergency funds, debt payoff, and more. Make smarter money decisions with tools that do the math for you.",
+    title: "Life Insurance Coverage Calculator | How Much Life Insurance Do You Need?",
+    description: "Calculate how much life insurance coverage your family needs using the DIME method.",
   },
 
   robots: {
@@ -46,13 +46,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
-
-  authors: [{name: "David Graham" }],
+  authors: [{ name: "David Graham" }],
   creator: "MoneyWise Calculators",
   publisher: "MoneyWise Calculators",
 };
@@ -61,30 +55,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3475627763908800"
           crossOrigin="anonymous"
         ></script>
-              <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "lifeinsurance-tool",
-              description: "Financial calculator tool",
-              url: "https://www.lifeinsurance-tool.com",
-              applicationCategory: "Finance",
+              name: "Life Insurance Coverage Calculator",
+              description: "Free tool to calculate how much life insurance coverage your family needs using the DIME method (Debt, Income, Mortgage, Education).",
+              url: "https://www.lifeinsurancecoveragecalculator.com",
+              applicationCategory: "FinanceApplication",
               operatingSystem: "All",
-              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }
+              browserRequirements: "Requires JavaScript",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD"
+              },
+              author: {
+                "@type": "Organization",
+                name: "MoneyWise Calculators",
+                url: "https://moneywisecalculator.com"
+              }
             }),
           }}
         />
-    </head>
+      </head>
       <body>{children}</body>
     </html>
   );
 }
-
